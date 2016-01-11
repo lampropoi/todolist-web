@@ -1,82 +1,40 @@
-<html ng-app="Prometheus">
-<head>
-	<title>Prometheus</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/styles.css">
+  	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+  	<link rel="stylesheet" type="text/css" href="css/set1.css"/>
+    <h1>ToDo List</h1>
+    <title>ToDo</title>
+  </head>
 
-	<link rel="icon" type="image/png" href="/css/images/favicon.png" />
-	<link rel="stylesheet" type="text/css" href="/css/style.css">
-	<link rel="stylesheet" type="text/css" href="/js/libraries/angular-material/angular-material.min.css">
-	<link rel="stylesheet" type="text/css" href="/js/libraries/fontawesome/css/font-awesome.min.css">
+  <body>
+    <!--Input Area where the user inserts his duties-->
+    <section>
+    	<span class="input input--hoshi">
+    		<input class="input__field input__field--hoshi" type="text" id="duty" />
+    		<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="duty">
+    		<span>Insert activity</span>
+    		</label>
+    	</span>
+    </section>
 
-	<script src="/js/libraries/angular/angular.min.js"></script>
-	<script src="/js/libraries/angular-aria/angular-aria.js"></script>
-	<script src="/js/libraries/hammerjs/hammer.js"></script>
-	<script src="/js/libraries/angular-material/angular-material.min.js"></script>
-	<script src="/js/libraries/angular-route/angular-route.min.js"></script>
-	<script src="/js/libraries/angular-messages/angular-messages.min.js"></script>
-	<script src="/js/libraries/angular-animate/angular-animate.min.js"></script>
-	<script src="/js/libraries/lodash/dist/lodash.min.js"></script>
-	<script src="/js/libraries/angular-translate/angular-translate.min.js"></script>
-	<script src="/js/libraries/angular-translate-loader-url/angular-translate-loader-url.min.js"></script>
-	<script src="/js/libraries/restangular/dist/restangular.min.js"></script>
-	<script src="/js/libraries/gsap/src/minified/TweenMax.min.js"></script>
-	<script src="/js/libraries/ng-Fx/dist/ng-Fx.min.js"></script>
-	<script src="/js/libraries/crypto-js/rollups/sha256.js"></script>
+    <!-- The duties are displayed-->
+    <section>
+      <h3>To Do</h3>
+      <table onclick="buttonClicked()" id ="tableArea">
+      </table>
+    <section>
 
-	<script src="/js/app.js"></script>
+    <!-- The already done duties-->
+      <section>
+        <h3> Done </h3>
+        <ul  id ="doneArea">
+        </ul>
+      <section>
 
-	<!-- Directives -->
-	<script src="/js/directives/featureRating.js"></script>
-	<script src="/js/directives/featureStatus.js"></script>
-
-	<!-- Modules -->
-	<script src="/js/modules/browserStorage.js"></script>
-	<script src="/js/modules/locationDecorator.js"></script>
-	<script src="/js/modules/logDecorator.js"></script>
-	<script src="/js/modules/permissioner.js"></script>
-	<script src="/js/modules/activeUser.js"></script>
-	<script src="/js/modules/errorHandler.js"></script>
-	<script src="/js/modules/bodyClass.js"></script>
-	<script src="/js/modules/materialEnhancer.js"></script>
-
-	<!-- Services -->
-	<script src="/js/services/featureAverageGrade.js"></script>
-
-	<!-- Resources -->
-	<script src="/js/resources/Authentication.js"></script>
-	<script src="/js/resources/Project.js"></script>
-	<script src="/js/resources/User.js"></script>
-
-	<!-- Filters -->
-	<script src="/js/filters/featureStatus.js"></script>
-
-	<!-- Controllers -->
-	<script src="/js/controllers/main.js"></script>
-	<script src="/js/controllers/toolbar.js"></script>
-	<script src="/js/controllers/home.js"></script>
-	<script src="/js/controllers/sidenav.js"></script>
-	<script src="/js/controllers/login.js"></script>
-	<script src="/js/controllers/register.js"></script>
-	<script src="/js/controllers/projects.js"></script>
-	<script src="/js/controllers/addProject.js"></script>
-	<script src="/js/controllers/updateProject.js"></script>
-	<script src="/js/controllers/updateFeature.js"></script>
-
-</head>
-<body ng-controller="main" body-class translate-cloak>
-	<div layout="column" layout-fill>
-		<section layout="column" flex>
-			<div ng-include src="'/views/toolbar.html'"></div>
-			<div id="view" class="view-animate" ng-view></div>
-			<div ng-include src="'/views/sidenav.html'"></div>
-		</section>
-		<!-- <md-toast hideDelay-5000>
-			<span flex>Custom toast!</span>
-			<md-button ng-click="closeToast()">
-				Close2
-			</md-button>
-		</md-toast> -->
-	</div>
-</body>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    	<script src="./js/app.js"></script>
+  </body>
 </html>
