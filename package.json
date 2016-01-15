@@ -1,28 +1,39 @@
 {
   "name": "todolist-web",
-  "version": "0.1.0",
   "description": "A To-do-list - example project",
-  "main": "app.js",
-  "scripts": {
-    "test": "eslint/app"
+  "version": "0.1.0",
+  "author": "Ioanna Lampropoulou",
+  "bugs": {
+    "url": "https://github.com/lampropoi/todolist-web/issues"
   },
+  "dependencies": {
+    "copyfiles": "^0.2.1",
+    "jquery": "^2.2.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.0",
+    "eslint": "^1.10.3",
+    "eslint-config-google": "^0.3.0"
+  },
+  "homepage": "https://github.com/lampropoi/todolist-web#readme",
+  "keywords": [
+    "commitizen",
+    "demo",
+    "eslint",
+    "jquery",
+    "to-do-list",
+    "todo",
+    "yeoman"
+  ],
+  "license": "MIT",
+  "main": "app.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lampropoi/todolist-web.git"
   },
-  "keywords": [
-    "to-do-list",
-    "jquery",
-    "demo",
-    "todo",
-    "eslint",
-    "commitizen",
-    "yeoman"
-  ],
-  "author": "Ioanna Lampropoulou",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/lampropoi/todolist-web/issues"
-  },
-  "homepage": "https://github.com/lampropoi/todolist-web#readme"
+  "scripts": {
+    "postinstall": "copyfiles node_modules/jquery/dist/jquery.js public/js/",
+    "start": "browser-sync start --server public --files 'public'",
+    "test": "eslint public/"
+  }
 }

@@ -18,7 +18,7 @@ var duties=[];
 
 $( "#duty" ).keypress(function(e) {
 	var code = e.keyCode || e.which;
-  if(code == 13 && duty.value!=='') {  //If Enter is pressed then save duty
+  if(code === 13 && duty.value!=='') {  //If Enter is pressed then save duty
 		duties.push(duty.value);
 		$( "<li>" + $( "ul.dutiesTable" ).append( duty.value) + "</li>");
 		duty.value='';

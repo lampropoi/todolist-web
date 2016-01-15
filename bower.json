@@ -1,0 +1,30 @@
+{
+  "name": "todolist-web",
+  "description": "A To-do-list - example project",
+  "main": "app.js",
+  "authors": [
+    "Ioanna Lampropoulou"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "to-do-list",
+    "jquery",
+    "demo",
+    "todo",
+    "eslint",
+    "commitizen",
+    "yeoman"
+  ],
+  "homepage": "https://github.com/lampropoi/todolist-web",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0"
+  }
+}
