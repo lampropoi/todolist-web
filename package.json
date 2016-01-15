@@ -1,0 +1,28 @@
+{
+  "name": "todolist-web",
+  "version": "0.1.0",
+  "description": "A To-do-list - example project",
+  "main": "app.js",
+  "scripts": {
+    "test": "eslint/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lampropoi/todolist-web.git"
+  },
+  "keywords": [
+    "to-do-list",
+    "jquery",
+    "demo",
+    "todo",
+    "eslint",
+    "commitizen",
+    "yeoman"
+  ],
+  "author": "Ioanna Lampropoulou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lampropoi/todolist-web/issues"
+  },
+  "homepage": "https://github.com/lampropoi/todolist-web#readme"
+}

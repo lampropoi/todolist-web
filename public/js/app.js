@@ -1,3 +1,19 @@
+
+
+$(document).ready(function(){
+
+	$("#tableArea").on('click', '.complete', function(event){
+		console.log(this);
+		console.log(event);
+
+
+	} )
+
+
+});
+
+
+
 var duties=[];
 
 $( "#duty" ).keypress(function(e) {
@@ -16,6 +32,7 @@ $( "#duty" ).keypress(function(e) {
 		checkImage.setAttribute("height", "18");
 		checkImage.setAttribute("width", "18");
 		checkImage.setAttribute("alt", "check");
+		checkImage.setAttribute("class", "complete");
 		checkImage.style.cursor = "pointer";
 
 		var modifyImage = document.createElement("IMG");
@@ -23,6 +40,7 @@ $( "#duty" ).keypress(function(e) {
 		modifyImage.setAttribute("height", "18");
 		modifyImage.setAttribute("width", "18");
 		modifyImage.setAttribute("alt", "modify");
+		modifyImage.setAttribute("class", "modify");
 		modifyImage.style.cursor = "pointer";
 
 		var deleteImage = document.createElement("IMG");
@@ -30,6 +48,7 @@ $( "#duty" ).keypress(function(e) {
 		deleteImage.setAttribute("height", "15");
 		deleteImage.setAttribute("width", "15");
 		deleteImage.setAttribute("alt", "delete");
+		deleteImage.setAttribute("class", "delete");
 		deleteImage.style.cursor = "pointer";
 
 		tr[duties.length-1] = document.createElement('tr');
@@ -55,7 +74,7 @@ $( "#duty" ).keypress(function(e) {
 
 
 function buttonClicked(){
-	var tableArea = document.getElementById("tableArea");
+	var tableArea = $("#tableArea");
 	var i,j;
   if (tableArea != null) { //Check which option is clicked
     for (i = 0; i < tableArea.rows.length; i++) {
