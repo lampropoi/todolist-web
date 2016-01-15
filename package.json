@@ -32,7 +32,7 @@
     "url": "git+https://github.com/lampropoi/todolist-web.git"
   },
   "scripts": {
-    "postinstall": "copyfiles node_modules/jquery/dist/jquery.js public/js/",
+    "postinstall": "copyfiles -f node_modules/jquery/dist/jquery.js public/js",
     "start": "browser-sync start --server public --files 'public'",
     "test": "eslint public/"
   }
