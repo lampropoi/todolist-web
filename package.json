@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "copyfiles": "^0.2.1",
+    "generator-editorconfig": "^1.0.0",
     "jquery": "^2.2.0"
   },
   "devDependencies": {
@@ -34,6 +35,6 @@
   "scripts": {
     "postinstall": "copyfiles -f node_modules/jquery/dist/jquery.js app/js",
     "start": "browser-sync start --server app --files 'app'",
-    "test": "eslint public/"
+    "test": "eslint app/"
   }
 }
