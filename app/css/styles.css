@@ -1,11 +1,15 @@
 body {
-    background-color: PapayaWhip;
+	background-color: PapayaWhip;
 }
 
 h1 {
-    color: blue;
+	color: blue;
 }
 
 p {
-    color:green;
+	color:green;
+}
+
+ul {
+	list-style-type:none;
 }

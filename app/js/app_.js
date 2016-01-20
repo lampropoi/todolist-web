@@ -1,5 +1,4 @@
 
-
 $(document).ready(function(){
 
 	$("#tableArea").on('click', '.complete', function(event){
@@ -115,10 +114,10 @@ function doneDuty(dutyDescr){
 };
 
 function modifyDuty(dutyDescr){
- 	dutyNew = document.getElementById("duty");
- 	dutyNew.value = dutyDescr.html();
+	var dutyNew = document.getElementById("duty");
+	dutyNew.value = dutyDescr.html();
 };
 
 function deleteDuty(duty){
-	 duty.remove();
+	duty.remove();
 };
