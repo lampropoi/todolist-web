@@ -10,9 +10,18 @@ $(document).ready(function() {
 		}
 	});
 
-	$('#tableArea').on('click', '.complete', function(event) {
-		console.log(this);
-		console.log(event);
+	$('#dutiesArea').on('click', '.complete', function() {
+		$(this).closest('li').find('.dutyText').appendTo('#doneArea');
+		$(this).closest('li').empty();
+	});
+
+	$('#dutiesArea').on('click', '.modify', function() {
+		$('#duty').val($(this).closest('li').find('.dutyText').html());
+		$(this).closest('li').empty();
+	});
+
+	$('#dutiesArea').on('click', '.delete', function() {
+		$(this).closest('li').empty();
 	});
 
 	function fillDutiesArea(duty) {
@@ -40,7 +49,7 @@ $(document).ready(function() {
 										.css({
 											cursor: 'pointer'
 										})
-											.addClass('complete')
+											.addClass('modify')
 		);
 		var spanDelete = $('<span></span>')
 										.append($('<img></img>')
@@ -55,7 +64,8 @@ $(document).ready(function() {
 										})
 											.addClass('delete')
 		);
-		var spanText = $('<span>' + duty + '</span>');
+		var spanText = $('<span>' + duty + '</span>')
+										.addClass('dutyText');
 		var newDuty = $('<li></li>')
 									.append(spanCheck)
 									.append(spanModify)
