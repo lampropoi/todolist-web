@@ -10,6 +10,6 @@ p {
 	color:green;
 }
 
-ul {
+ul#dutiesArea{
 	list-style-type:none;
 }

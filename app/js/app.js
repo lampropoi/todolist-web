@@ -11,7 +11,10 @@ $(document).ready(function() {
 	});
 
 	$('#dutiesArea').on('click', '.complete', function() {
-		$(this).closest('li').find('.dutyText').appendTo('#doneArea');
+		var doneDuty = $(this)
+										.closest('li')
+										.find('.dutyText');
+		$('<li></li>').append(doneDuty).appendTo('#doneArea');
 		$(this).closest('li').empty();
 	});
 
